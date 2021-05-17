@@ -4,5 +4,12 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
+	<bean class="concierto.instrumentos.Tambor" id="tambor">
+		<property name="sonido" value="pom , pom ,pom en xml"></property>
+	</bean>
+
+	<bean class="concierto.musicos.Solista" id="solista">
+		<property name="instrumento" ref="tambor"></property>
+	</bean>
 
 </beans>

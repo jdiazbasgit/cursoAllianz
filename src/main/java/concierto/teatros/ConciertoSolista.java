@@ -1,9 +1,17 @@
 package concierto.teatros;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import concierto.musicos.Solista;
+
 public class ConciertoSolista {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		ApplicationContext contexto= new ClassPathXmlApplicationContext("spring.xml");
+		Solista solista= (Solista) contexto.getBean("solista");
+		solista.tocar();
 
 	}
 
