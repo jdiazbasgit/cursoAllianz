@@ -4,11 +4,23 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-	<bean class="concierto.instrumentos.Tambor" id="tambor">
+	<bean class="concierto.instrumentos.Instrumento" id="tambor" scope="prototype">
 		<property name="sonido" value="pom , pom ,pom en xml"></property>
+	</bean>
+	
+	<bean class="concierto.instrumentos.Instrumento" id="trompeta" scope="prototype">
+		<property name="sonido" value="tuuu, tuuu, tuuu en xml"></property>
+	</bean>
+	
+	<bean class="concierto.instrumentos.Instrumento" id="guitarra" scope="prototype">
+		<property name="sonido" value="tlan, tlan, tla en xml"></property>
 	</bean>
 
 	<bean class="concierto.musicos.Solista" id="solista">
+		<property name="instrumento" ref="tambor"></property>
+	</bean>
+
+	<bean class="concierto.musicos.Solista" id="solista1">
 		<property name="instrumento" ref="tambor"></property>
 	</bean>
 

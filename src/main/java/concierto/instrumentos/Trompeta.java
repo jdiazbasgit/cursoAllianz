@@ -1,6 +1,6 @@
 package concierto.instrumentos;
 
-public class Trompeta implements InstrumentoInterface {
+public class Trompeta extends Instrumento {
 	private String sonido;
 
 	@Override

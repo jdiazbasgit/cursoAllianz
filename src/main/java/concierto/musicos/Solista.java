@@ -1,10 +1,11 @@
 package concierto.musicos;
 
-import concierto.instrumentos.InstrumentoInterface;
+import concierto.instrumentos.Instrumento;
+import concierto.instrumentos.Tambor;
 
 public class Solista implements MusicoInterface{
 	
-	private InstrumentoInterface instrumento;
+	private Instrumento instrumento;
 
 	@Override
 	public void tocar() {
@@ -12,12 +13,14 @@ public class Solista implements MusicoInterface{
 		
 	}
 
-	public InstrumentoInterface getInstrumento() {
+	public Instrumento getInstrumento() {
 		return instrumento;
 	}
 
-	public void setInstrumento(InstrumentoInterface instrumento) {
+	public void setInstrumento(Instrumento instrumento) {
 		this.instrumento = instrumento;
 	}
+
+	
 
 }
