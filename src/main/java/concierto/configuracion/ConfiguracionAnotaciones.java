@@ -4,11 +4,13 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import concierto.instrumentos.Guitarra;
 
 @Configuration
-@ComponentScan(value = {"concierto.instrumentos","concierto.musicos"})
+@ComponentScan("concierto")
+@EnableAspectJAutoProxy
 public class ConfiguracionAnotaciones {
 
 	

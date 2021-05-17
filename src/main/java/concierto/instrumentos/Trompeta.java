@@ -7,19 +7,14 @@ import org.springframework.stereotype.Component;
 @Component
 @Qualifier("tocameAMi")
 public class Trompeta extends Instrumento {
-	@Value("tuuu, tuuu tuuu, con anotaciones")
+	
 	private String sonido;
 
-	@Override
-	public String sonar() {
-		// TODO Auto-generated method stub
-		return getSonido();
-	}
-
+	
 	public String getSonido() {
 		return sonido;
 	}
-
+	@Value("nada")
 	public void setSonido(String sonido) {
 		this.sonido = sonido;
 	}

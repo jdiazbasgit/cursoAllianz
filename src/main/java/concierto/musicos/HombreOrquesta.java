@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import concierto.anotaciones.Vigilante;
+import concierto.excepciones.InstrumentoRotoException;
 import concierto.instrumentos.InstrumentoInterface;
 
 @Component
@@ -16,7 +18,8 @@ public class HombreOrquesta implements MusicoInterface {
 	private List<InstrumentoInterface> instrumentos;
 
 	@Override
-	public void tocar() {
+	@Vigilante
+	public void tocar() throws InstrumentoRotoException {
 		for (InstrumentoInterface instrumento : instrumentos) {
 			System.out.println(instrumento.sonar());
 		}

@@ -3,6 +3,8 @@ package concierto.teatros;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import concierto.excepciones.InstrumentoRotoException;
+import concierto.musicos.MusicoInterface;
 import concierto.musicos.Solista;
 
 public class ConciertoSolistaAnotaciones {
@@ -11,8 +13,12 @@ public class ConciertoSolistaAnotaciones {
 		
 		
 		ApplicationContext contexto= new ClassPathXmlApplicationContext("SpringAnotaciones.xml");
-		Solista solista= (Solista) contexto.getBean("solista");
-		solista.tocar();
+		MusicoInterface solista= (Solista) contexto.getBean("solista");
+		try {
+			solista.tocar();
+		} catch (InstrumentoRotoException e) {
+			System.out.println("Señores se ha roto el instrumento, el concierto ha termonado");
+		}
 	}
 
 }
