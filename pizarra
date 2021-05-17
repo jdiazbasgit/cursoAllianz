@@ -1,0 +1,14 @@
+
+
+Interceptor ---> aspecto
+
+Pointcut ----> accion (ejecucion del metodo tocar)
+
+
+Advices---> dentro de la accion en que punto
+
+	Before --> antes de ejecutarse
+	After ----> despues de ejecutarse
+	AfterReturning -> despues de ejecutarse si todo sale bien
+	AfterThrowing --> despues de lanzarse una excepcion
+	Around -> hace todos los anteriores a la vez

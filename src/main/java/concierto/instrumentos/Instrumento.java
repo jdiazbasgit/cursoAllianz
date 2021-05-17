@@ -4,6 +4,7 @@ public class Instrumento implements InstrumentoInterface {
 
 	
 	private String sonido;
+	
 	@Override
 	public String sonar() {
 		// TODO Auto-generated method stub

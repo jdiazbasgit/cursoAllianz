@@ -1,27 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
 
 
-	<bean class="concierto.instrumentos.Instrumento" id="tambor" scope="prototype">
+	<bean class="concierto.instrumentos.Instrumento" id="tambor" scope="prototype" autowire-candidate="true" >
 		<property name="sonido" value="pom , pom ,pom en xml"></property>
 	</bean>
-	
-	<bean class="concierto.instrumentos.Instrumento" id="trompeta" scope="prototype">
+
+	<bean class="concierto.instrumentos.Instrumento" id="trompeta" scope="prototype" primary="true" autowire-candidate="true">
 		<property name="sonido" value="tuuu, tuuu, tuuu en xml"></property>
 	</bean>
-	
-	<bean class="concierto.instrumentos.Instrumento" id="guitarra" scope="prototype">
+
+	<bean class="concierto.instrumentos.Instrumento" id="guitarra" scope="prototype" autowire-candidate="false">
 		<property name="sonido" value="tlan, tlan, tla en xml"></property>
 	</bean>
 
-	<bean class="concierto.musicos.Solista" id="solista">
-		<property name="instrumento" ref="tambor"></property>
+	<bean class="concierto.musicos.Solista" id="solista" autowire="byType">
+		
 	</bean>
 
 	<bean class="concierto.musicos.Solista" id="solista1">
 		<property name="instrumento" ref="tambor"></property>
 	</bean>
+
+	<bean class="concierto.musicos.HombreOrquesta" id="hombreOrquesta" autowire="byType">
+		
+	</bean>
+
+
+	<util:list id="instrumentos">
+		<ref bean="guitarra" />
+		<ref bean="tambor" />
+		<ref bean="trompeta" />
+		<ref bean="guitarra" />
+		<ref bean="tambor" />
+		<ref bean="trompeta" />
+		<ref bean="guitarra" />
+		<ref bean="tambor" />
+		<ref bean="trompeta" />
+	</util:list>
 
 </beans>

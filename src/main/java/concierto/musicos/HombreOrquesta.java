@@ -2,10 +2,17 @@ package concierto.musicos;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
 import concierto.instrumentos.InstrumentoInterface;
 
+@Component
 public class HombreOrquesta implements MusicoInterface {
 	
+	@Autowired
+	//@Qualifier("tocameAMi")
 	private List<InstrumentoInterface> instrumentos;
 
 	@Override
