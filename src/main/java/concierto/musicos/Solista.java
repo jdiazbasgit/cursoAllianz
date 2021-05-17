@@ -1,4 +1,4 @@
-package musicos;
+package concierto.musicos;
 
 import concierto.instrumentos.InstrumentoInterface;
 
