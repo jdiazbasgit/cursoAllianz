@@ -30,7 +30,7 @@ public class AvisadorDeAudiencia {
 		System.out.println("Señores ya pueden encender los moviles");
 	}
 	
-	//@AfterThrowing("sujetador()")
+	@AfterThrowing("sujetador()")
 	public void intrumetoRoto() {
 		System.out.println("se ha roto el instrumento, pasen por taquilla a por el dinero");
 	}

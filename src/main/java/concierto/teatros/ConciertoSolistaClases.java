@@ -12,9 +12,9 @@ public class ConciertoSolistaClases {
 
 	public static void main(String[] args) {
 		ApplicationContext contexto = new AnnotationConfigApplicationContext(Configuracion.class);
-		MusicoInterface hombreOrquesta = (HombreOrquesta) contexto.getBean("hombreOrquesta");
+		MusicoInterface solista = (MusicoInterface) contexto.getBean("solista");
 		try {
-			hombreOrquesta.tocar();
+			solista.tocar();
 		} catch (InstrumentoRotoException e) {
 			System.out.println("Señores se ha roto el instrumento, el concierto ha termonado");
 		}

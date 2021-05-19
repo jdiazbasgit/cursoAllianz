@@ -17,13 +17,13 @@ public class ConciertoHompreOrquestaClases {
 		ApplicationContext contexto = new AnnotationConfigApplicationContext(ConfiguracionAnotaciones.class);
 
 		try {
-			Solista solista = (Solista) contexto.getBean("solista");
-			solista.tocar();
+			//MusicoInterface solista = (MusicoInterface) contexto.getBean("solista");
+			//System.out.println("mensaje del musico:" + solista.tocar());
 			System.out.println("----------hombre orquesta---------");
-			MusicoInterface hombreOrquesta = (HombreOrquesta) contexto.getBean("hombreOrquesta");
+			MusicoInterface hombreOrquesta = (MusicoInterface) contexto.getBean("hombreOrquesta");
 			hombreOrquesta.tocar();
 		} catch (InstrumentoRotoException e) {
-			//System.out.println("Señores se ha roto el instrumento, el concierto ha termonado");
+			 System.out.println("Señores se ha roto el instrumento, el concierto ha termonado");
 		}
 	}
 

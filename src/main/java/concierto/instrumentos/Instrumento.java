@@ -7,7 +7,7 @@ public class Instrumento implements InstrumentoInterface {
 	
 	private String sonido;
 	
-	@Override
+	
 	public String sonar() throws InstrumentoRotoException {
 		// TODO Auto-generated method stub
 		

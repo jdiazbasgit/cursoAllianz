@@ -13,14 +13,14 @@ import concierto.instrumentos.Tambor;
 public class Solista implements MusicoInterface{
 	
 	@Autowired
-	@Qualifier("tamborcito")
+	@Qualifier("guitarra")
 	private Instrumento instrumento;
 
-	@Override
+	   
 	@Vigilante
-	public void tocar() throws InstrumentoRotoException {
+	public String tocar() throws InstrumentoRotoException {
 		System.out.println(instrumento.sonar());
-		
+		return "hola";
 	}
 
 	public Instrumento getInstrumento() {
