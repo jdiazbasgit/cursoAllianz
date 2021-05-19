@@ -23,7 +23,7 @@ public class ConciertoHompreOrquestaClases {
 			MusicoInterface hombreOrquesta = (HombreOrquesta) contexto.getBean("hombreOrquesta");
 			hombreOrquesta.tocar();
 		} catch (InstrumentoRotoException e) {
-			System.out.println("Señores se ha roto el instrumento, el concierto ha termonado");
+			//System.out.println("Señores se ha roto el instrumento, el concierto ha termonado");
 		}
 	}
 
